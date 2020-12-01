@@ -1,0 +1,138 @@
+object Form2: TForm2
+  Cursor = crDrag
+  Left = 913
+  Height = 246
+  Top = 337
+  Width = 304
+  BorderStyle = bsSingle
+  Caption = 'Добавление книги'
+  ClientHeight = 246
+  ClientWidth = 304
+  OnCreate = FormCreate
+  LCLVersion = '2.0.10.0'
+  object Edit1: TEdit
+    Left = 0
+    Height = 23
+    Top = 28
+    Width = 301
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 0
+    Height = 23
+    Top = 83
+    Width = 301
+    ParentFont = False
+    TabOrder = 1
+  end
+  object MaskEdit1: TMaskEdit
+    Left = 0
+    Height = 23
+    Top = 134
+    Width = 96
+    CharCase = ecNormal
+    MaxLength = 10
+    ParentFont = False
+    TabOrder = 2
+    EditMask = '0000-00-00;1;_'
+    Text = '    -  -  '
+    SpaceChar = '_'
+  end
+  object MaskEdit2: TMaskEdit
+    Left = 0
+    Height = 23
+    Top = 184
+    Width = 96
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 3
+    OnChange = MaskEdit2Change
+    Text = '1'
+    SpaceChar = '_'
+  end
+  object Label1: TLabel
+    Left = 0
+    Height = 15
+    Top = 9
+    Width = 87
+    Caption = 'Название книги'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 0
+    Height = 15
+    Top = 62
+    Width = 33
+    Caption = 'Автор'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 0
+    Height = 15
+    Top = 115
+    Width = 95
+    Caption = 'Дата публикации'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 0
+    Height = 15
+    Top = 168
+    Width = 65
+    Caption = 'Количество'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 190
+    Height = 79
+    Top = 112
+    Width = 114
+    Caption = 'Добавить книгу'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Button2: TButton
+    Left = 112
+    Height = 25
+    Top = 216
+    Width = 75
+    Caption = 'Назад'
+    OnClick = Button2Click
+    ParentFont = False
+    TabOrder = 5
+  end
+  object UpDown1: TUpDown
+    Left = 96
+    Height = 23
+    Top = 184
+    Width = 17
+    Associate = MaskEdit2
+    Min = 0
+    Position = 1
+    TabOrder = 6
+  end
+  object Button3: TButton
+    Left = 104
+    Height = 25
+    Top = 134
+    Width = 38
+    Caption = 'Д'
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 7
+  end
+  object CalendarDialog1: TCalendarDialog
+    Date = 44158
+    OKCaption = '&ОК'
+    CancelCaption = 'Отмена'
+    Left = 336
+    Top = 24
+  end
+end

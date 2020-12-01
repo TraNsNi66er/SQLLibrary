@@ -1,0 +1,159 @@
+object Form1: TForm1
+  Left = 970
+  Height = 398
+  Top = 292
+  Width = 816
+  BorderStyle = bsSingle
+  Caption = 'Библиотека'
+  ClientHeight = 398
+  ClientWidth = 816
+  OnCreate = FormCreate
+  LCLVersion = '2.0.10.0'
+  object DBGrid1: TDBGrid
+    Left = 8
+    Height = 328
+    Top = 70
+    Width = 816
+    AutoFillColumns = True
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 8
+    Height = 25
+    Top = 400
+    Width = 128
+    Caption = 'connect'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 1
+    Visible = False
+  end
+  object Button2: TButton
+    Left = 0
+    Height = 25
+    Top = 8
+    Width = 128
+    Caption = 'Книги'
+    OnClick = Button2Click
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Button3: TButton
+    Left = 152
+    Height = 25
+    Top = 8
+    Width = 128
+    Caption = 'Пользователи'
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 3
+  end
+  object Button4: TButton
+    Left = 312
+    Height = 25
+    Top = 8
+    Width = 128
+    Caption = 'Выдача'
+    OnClick = Button4Click
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Button5: TButton
+    Left = 552
+    Height = 25
+    Top = 8
+    Width = 128
+    Caption = 'Новая книга'
+    OnClick = Button5Click
+    ParentFont = False
+    TabOrder = 5
+  end
+  object Button6: TButton
+    Left = 688
+    Height = 25
+    Top = 8
+    Width = 128
+    Caption = 'Новый пользователь'
+    OnClick = Button6Click
+    ParentFont = False
+    TabOrder = 6
+  end
+  object Edit1: TEdit
+    Left = 0
+    Height = 23
+    Top = 40
+    Width = 200
+    OnChange = Edit1Change
+    ParentFont = False
+    TabOrder = 7
+  end
+  object Edit2: TEdit
+    Left = 224
+    Height = 23
+    Top = 40
+    Width = 216
+    OnChange = Edit1Change
+    ParentFont = False
+    TabOrder = 8
+  end
+  object Button7: TButton
+    Left = 552
+    Height = 25
+    Top = 38
+    Width = 128
+    Caption = 'Выдача книги'
+    OnClick = Button7Click
+    ParentFont = False
+    TabOrder = 9
+  end
+  object Button8: TButton
+    Left = 688
+    Height = 25
+    Top = 38
+    Width = 128
+    Caption = 'Возврат книги'
+    OnClick = Button8Click
+    ParentFont = False
+    TabOrder = 10
+  end
+  object MySQL57Connection1: TMySQL57Connection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'onyegov4_sbk1204'
+    KeepConnection = False
+    Params.Strings = (
+      'Port=3306'
+    )
+    Password = 'Qwerty123@'
+    Transaction = SQLTransaction1
+    UserName = 'onyegov4_sbk1204'
+    CharSet = 'utf8'
+    HostName = 'onyegov4.beget.tech'
+    SkipLibraryVersionCheck = True
+    Left = 80
+    Top = 120
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = MySQL57Connection1
+    Transaction = SQLTransaction1
+    Params = <>
+    Left = 16
+    Top = 120
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = MySQL57Connection1
+    Left = 48
+    Top = 120
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    Left = 112
+    Top = 120
+  end
+end

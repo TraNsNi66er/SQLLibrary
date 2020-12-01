@@ -1,0 +1,130 @@
+object Form4: TForm4
+  Left = 852
+  Height = 379
+  Top = 521
+  Width = 725
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Выдача книги'
+  ClientHeight = 379
+  ClientWidth = 725
+  OnCreate = FormCreate
+  LCLVersion = '2.0.10.0'
+  object Button1: TButton
+    Left = 632
+    Height = 25
+    Top = 352
+    Width = 75
+    Caption = 'Назад'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 0
+    Height = 23
+    Top = 26
+    Width = 230
+    OnChange = Edit1Change
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 0
+    Height = 15
+    Top = 6
+    Width = 87
+    Caption = 'Название книги'
+    ParentColor = False
+    ParentFont = False
+  end
+  object ListBox1: TListBox
+    Left = 0
+    Height = 320
+    Top = 57
+    Width = 230
+    ItemHeight = 0
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Edit2: TEdit
+    Left = 248
+    Height = 23
+    Top = 26
+    Width = 214
+    OnChange = Edit2Change
+    ParentFont = False
+    TabOrder = 3
+  end
+  object ListBox2: TListBox
+    Left = 248
+    Height = 320
+    Top = 58
+    Width = 215
+    ItemHeight = 0
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Label2: TLabel
+    Left = 248
+    Height = 15
+    Top = 6
+    Width = 77
+    Caption = 'Пользователь'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Edit3: TEdit
+    Left = 608
+    Height = 23
+    Top = 26
+    Width = 112
+    ParentFont = False
+    TabOrder = 5
+    Text = 'Edit3'
+  end
+  object Button2: TButton
+    Left = 472
+    Height = 351
+    Top = 26
+    Width = 134
+    Caption = 'ВЫДАТЬ'
+    OnClick = Button2Click
+    ParentFont = False
+    TabOrder = 6
+  end
+  object Button3: TButton
+    Left = 608
+    Height = 25
+    Top = 58
+    Width = 112
+    Caption = 'Дата возврата'
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 7
+  end
+  object Edit4: TEdit
+    Left = 608
+    Height = 23
+    Top = 96
+    Width = 112
+    ParentFont = False
+    TabOrder = 8
+    Text = 'Edit4'
+  end
+  object Label3: TLabel
+    Left = 608
+    Height = 15
+    Top = 6
+    Width = 53
+    Caption = 'СЕГОДНЯ'
+    ParentColor = False
+    ParentFont = False
+  end
+  object CalendarDialog1: TCalendarDialog
+    Date = 44158
+    OKCaption = '&ОК'
+    CancelCaption = 'Отмена'
+    Left = 512
+  end
+end
